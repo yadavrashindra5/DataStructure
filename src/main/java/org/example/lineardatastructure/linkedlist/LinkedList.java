@@ -1,13 +1,21 @@
 package org.example.lineardatastructure.linkedlist;
 
 public interface LinkedList<T> {
-    Node<T> insertAtBegin(T data,Node<T> start);
-    Node<T> insertAtEnd (T data,Node<T> start);
-    Node<T> insertAfter(T data,Node<T> start);
-    Node<T> insertBefore(T data,Node<T> start);
+    Node<T> insertAtBegin(T data, Node<T> start);
+
+    Node<T> insertAtEnd(T data, Node<T> start);
+
+    Node<T> insertAfter(T data, T after, Node<T> start);
+
+    Node<T> insertBefore(T data, T before, Node<T> start);
+
     void display(Node<T> start);
-    void deleteFirstNode(Node<T> start);
-    void deleteLastNode(Node<T> start);
-    void deleteAfter(T data,Node<T> start);
-    void deleteBefore(T data,Node<T> start);
+
+    Node<T> deleteFirstNode(Node<T> start);
+
+    Node<T> deleteLastNode(Node<T> start);
+
+    Node<T> deleteAfter(T after, Node<T> start);
+
+    Node<T> deleteBefore(T before, Node<T> start);
 }
