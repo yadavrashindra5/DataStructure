@@ -1,18 +1,26 @@
 package org.example.tree;
 
+import org.example.tree.binarytree.BinarySearchTree;
+import org.example.tree.binarytree.BinarySearchTreeInterface;
+
 public class Main {
     public static void main(String[] args) {
-        Node<Integer>root=null;
-        Node<Integer>node=new Node<Integer>(89);
-        root=node;
-        node.left=new Node(79);
-        node.right=new Node(90);
+        Node root=null;
         Traversal traversal=new Traversal();
-        System.out.println("preorder traversal");
-        traversal.preorder(root);
-        System.out.println("inorder traversal");
-        traversal.inorder(root);
-        System.out.println("postorder traversal");
-        traversal.postorder(root);
+        BinarySearchTreeInterface bst=new BinarySearchTree();
+        int arr[]={45,39,56,12,34,78,32,10,89,54,67,81};
+        for(int i=0;i<arr.length;++i){
+            root=bst.insert(arr[i],root);
+        }
+//        traversal.preorder(root);
+//        System.out.println();
+//        traversal.postorder(root);
+//        System.out.println();
+//        traversal.inorder(root);
+//        System.out.println();
+//        System.out.println(bst.heightOfBST(root));
+        System.out.println(bst.numberOfNodes(root));
+        System.out.println(bst.findLargestElement(root));
+        System.out.println(bst.findSmallestElement(root));
     }
 }

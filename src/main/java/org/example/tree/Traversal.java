@@ -1,7 +1,7 @@
 package org.example.tree;
 
 public class Traversal {
-    public <T> void preorder(Node<T> root){
+    public  void preorder(Node root){
         //Node-Left-Right
         if(root==null){
             return;
@@ -11,7 +11,7 @@ public class Traversal {
         preorder(root.right);
     }
 
-    public <T> void inorder(Node<T> root){
+    public void inorder(Node root){
         //Left-Node-Right
         if(root==null){
             return;
@@ -21,7 +21,7 @@ public class Traversal {
         inorder(root.right);
     }
 
-    public <T> void postorder(Node<T> root){
+    public void postorder(Node root){
         //Left-Right-Node
         if(root==null){
             return;
@@ -31,7 +31,7 @@ public class Traversal {
         System.out.print(root.data+" ");
     }
 
-    public <T> void levelorder(Node<T> root){
+    public void levelorder(Node root){
 
     }
 }

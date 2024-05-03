@@ -4,12 +4,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-public class Node <T> {
+public class Node  {
     public Node left;
     public Node right;
-    public T data;
+    public int data;
 
-    public Node(T data){
+    public Node(int data){
         this.data=data;
     }
 
