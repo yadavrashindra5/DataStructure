@@ -19,8 +19,7 @@ public class Main {
 //        traversal.inorder(root);
 //        System.out.println();
 //        System.out.println(bst.heightOfBST(root));
-        System.out.println(bst.numberOfNodes(root));
-        System.out.println(bst.findLargestElement(root));
-        System.out.println(bst.findSmallestElement(root));
+        bst.mirrorImage(root);
+        traversal.preorder(root);
     }
 }

@@ -15,4 +15,5 @@ public interface BinarySearchTreeInterface {
     int numberOfExternalNode(Node root);
     int findSmallestElement(Node root);
     int findLargestElement(Node root);
+    void mirrorImage(Node root);
 }

@@ -1,6 +1,8 @@
 package org.example.tree.binarytree;
 
+import lombok.Getter;
 import org.example.tree.Node;
+
 
 public class BinarySearchTree implements BinarySearchTreeInterface{
     @Override
@@ -172,5 +174,18 @@ public class BinarySearchTree implements BinarySearchTreeInterface{
             return root.data;
         }
         return findLargestElement(root.right);
+    }
+
+    @Override
+    public void mirrorImage(Node root) {
+        if(root==null){
+            return;
+        }
+        mirrorImage(root.left);
+        mirrorImage(root.right);
+        Node temp=root.left;
+        root.left=root.right;
+        root.right=temp;
+        return;
     }
 }
