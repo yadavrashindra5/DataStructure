@@ -1,6 +1,9 @@
-package org.example.datastructure;
+package org.example.list;
 
-public class LinkedList<T> implements ILinkedList<T>{
+import org.example.datastructure.ILinkedList;
+import org.example.datastructure.Node;
+
+public class LinkedList<T> implements ILinkedList<T> {
     private Node<T> head;
     private Node<T> tail;
     private int size=0;
